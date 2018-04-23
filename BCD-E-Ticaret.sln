@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{D7BFDC73-4B1E-4620-9636-39E1BD751834}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{B81B41DE-39AE-406E-AD20-BE6484AFB6FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saglik.DAL", "Saglik.DAL\Saglik.DAL.csproj", "{6F43CEFD-070D-4E9B-A53C-68A7FA9F505E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saglik.Domain", "Saglik.Domain\Saglik.Domain.csproj", "{7554376E-7D80-40ED-90AB-FC3859F08905}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saglik.PL", "Saglik.PL\Saglik.PL.csproj", "{EEADA0DF-BF8C-4DFC-B27E-DF5C0582B56F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F43CEFD-070D-4E9B-A53C-68A7FA9F505E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F43CEFD-070D-4E9B-A53C-68A7FA9F505E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F43CEFD-070D-4E9B-A53C-68A7FA9F505E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F43CEFD-070D-4E9B-A53C-68A7FA9F505E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7554376E-7D80-40ED-90AB-FC3859F08905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7554376E-7D80-40ED-90AB-FC3859F08905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7554376E-7D80-40ED-90AB-FC3859F08905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7554376E-7D80-40ED-90AB-FC3859F08905}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEADA0DF-BF8C-4DFC-B27E-DF5C0582B56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEADA0DF-BF8C-4DFC-B27E-DF5C0582B56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEADA0DF-BF8C-4DFC-B27E-DF5C0582B56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEADA0DF-BF8C-4DFC-B27E-DF5C0582B56F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F43CEFD-070D-4E9B-A53C-68A7FA9F505E} = {D7BFDC73-4B1E-4620-9636-39E1BD751834}
+		{7554376E-7D80-40ED-90AB-FC3859F08905} = {D7BFDC73-4B1E-4620-9636-39E1BD751834}
+		{EEADA0DF-BF8C-4DFC-B27E-DF5C0582B56F} = {B81B41DE-39AE-406E-AD20-BE6484AFB6FD}
+	EndGlobalSection
+EndGlobal

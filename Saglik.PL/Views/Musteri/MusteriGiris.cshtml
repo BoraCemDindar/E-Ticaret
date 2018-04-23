@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "MusteriGiris";
+}
+
+<h2>MusteriGiris</h2>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+@using (Ajax.BeginForm("MusteriGiris", "Musteri", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "divsonuc" }, new { id = "formGenel" }))
+{
+    <div class="container">
+        <div class="row">
+            <div class="alert alert-warning" role="alert">
+                <strong>
+                    Sitemizden alışveriş yapabilmeniz için üye olmanız gereki. Üye değilseniz
+                    <a href="/Musteri/MusteriKayit">Yeni Üye Kayıt İşlemleri için Tıklayınız...</a>
+                </strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-2"></div>
+                <div class="col-md-8"> <h3 class="page-title text-center">Üye Giriş </h3></div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-2">
+                    <div class="col-md-2 text-center"><span class="form-control-static">Email</span></div>
+                    <div class="col-md-6"><input id="Email" name="Email" type="text" placeholder="Email Adresinizi Giriniz..." /></div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-2">
+                    <div class="col-md-4 text-right"><span class="form-control-static">Şifre</span></div>
+                    <div class="col-md-6"><input id="Sifre" name="Sifre" type="password" placeholder="Şifrenizi Giriniz..." /></div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-2">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-6"><input class="btn btn-default" id="btnGiris" type="submit" value="Giriş" /></div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-4"></div>
+                <div id="divsonuc" class="col-md-6 text-danger"></div>
+            </div>
+        </div>
+    </div>
+}

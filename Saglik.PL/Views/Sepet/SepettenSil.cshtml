@@ -1,0 +1,45 @@
+﻿@model List<Saglik.PL.Models.cSepet>
+
+@{
+    Layout = null;
+}
+    <!-- page-title start -->
+    <!-- ================ -->
+    <h1 class="page-title margin-top-clear">Alışveriş Sepeti</h1>
+    <!-- page-title end -->
+    <div class="space"></div>
+    <table class="table cart table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Ürün Adı </th>
+                <th>Fiyat </th>
+                <th>Adet</th>
+                <th>Sil </th>
+                <th class="amount">Toplam </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="remove-data">
+                    <td class="product"><a href="/Home/UrunDetay/@item.urunid">@item.urunad</a><small>4.7" @item.urunad</small></td>
+                    <td class="price">@item.fiyat </td>
+                    <td class="quantity">@item.adet</td>
+                    <td class="remove"><input id="Button1" class="small" type="image" src="~/Content/images/delete.png" width="20" height="20" onclick="Sil ('@item.urunid')" /></td>
+                    <td class="amount">(@item.tutar) </td>
+                </tr>
+            }
+            <tr>
+                <td class="total-quantity" colspan="4">Toplam @if (Session["toplamadet"] != null)
+                { @Session["toplamadet"].ToString()} adet</td>
+                <td class="total-amount">
+                    @if (Session["toplamtutar"] != null)
+                { @Session["toplamtutar"].ToString()}
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="text-right">
+    <a href="/Home/Index" class="btn btn-group btn-default btn-sm">Alışverişe Devam</a>
+    <a href="/Home/Satıs" class="btn btn-group btn-default btn-sm">Satın Al</a>
+</div>

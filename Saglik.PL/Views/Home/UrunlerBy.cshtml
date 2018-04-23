@@ -1,0 +1,41 @@
+﻿@model List<Saglik.Domain.Core.Urun>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3">
+                <div><span class="badge default-bg">%50 indirim</span></div>
+                <h3 class="title"><span>@item.UrunAdi</span></h3>
+                <div class="overlay-container">
+                    <img src="@item.UrunResimYolu1" title="@item.UrunAdi" alt="@item.UrunAdi" />
+                    <a href="/Home/UrunDetay/@item.ID" class="overlay small"><i class="fa fa-plus"></i><span>detaylar...</span></a>
+                </div>
+                <p>Özel kampanyalı kdv dahil fiyatlardır.</p>
+                <div class="listing-item-body clearfix">
+                    <span class="price">@item.UrunFiyat</span>
+                    <input id="Adet_@item.ID" class="pull-right" type="number" min="1" max="@item.Miktar" value="1" />
+                </div>
+                <input id="Button1" class="pull-right small" type="image" src="~/Content/images/Sepet.png" width="128" height="26" onclick="Ekle('@item.ID', $('#Adet_@item.ID').val())" />
+            </div>
+        }
+ 
+    </div>
+</div>
+<script type="text/javascript">
+    function Ekle(id, adet) {
+        $.ajax({
+            type: "GET",
+            url: "/Sepet/SepeteEkle",
+            data: { ID: id, Adet: adet },
+            success: function (sonuc) {
+                $('#sepet').html(sonuc);
+            },
+            error: function () {
+                alert('hata');
+            }
+        });
+    }
+</script>
+
+
